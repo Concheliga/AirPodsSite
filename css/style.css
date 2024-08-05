@@ -75,6 +75,10 @@ body{
     padding-bottom: 50px;
 }
 
+.header__content-images img{
+    max-width: 100%;
+}
+
 .header__content-images::before{
     content: '';
     position: absolute;
@@ -137,6 +141,7 @@ body{
 
 .choose-color__list{
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
 }
@@ -181,7 +186,7 @@ body{
 
 .case{
     background-color: #FAFAFA;
-    padding: -80px 0 100px;
+    padding: 80px 0 100px;
     text-align: center;
 }
 
@@ -259,7 +264,122 @@ body{
 .footer__list{
     padding-top: 80px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+@media(max-width: 1368px){
+    .title{
+        transform: none;
+        font-size: 140px;
+        padding-top: 20vh;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    .title--s{
+        transform: none;
+    }
+    .title--m{
+        transform: none;
+    }
+    .title--ax{
+        transform: none;
+    }
+}
+
+@media(max-width: 880px){
+    .title{
+        position: relative;
+        font-size: 100px;
+        padding-top: 0;
+    }
+    .title--m{
+        padding-left: 15px;
+    }
+}
+
+@media(max-width: 768px){
+    .choose-color{
+        padding-bottom: 60px;
+    }
+    .choose-color__list{
+        gap: 16px;
+    }
+    .main__title{
+        font-size: 36px;
+    }
+    .composition{
+        margin-bottom: 60px;
+    }
+    .case{
+        padding: 60px 0;
+    }
+    .energy__title{
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+    .energy__number{
+        font-size: 110px;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 664px){
+    .title{
+        font-size: 58px;
+    }
+}
+
+@media(max-width: 560px){
+    .choose-color__text{
+        margin-bottom: 60px;
+    }
+    .choose-color{
+        padding-bottom: 40px;
+    }
+    .case{
+        padding: 40px 0;
+    }
+    .composition__inner-text p{
+        width: 100%;
+    }
+    .composition__inner{
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+    .menu__list{
+        flex-wrap: wrap;
+        gap: 20px 40px;
+    }
+    .menu__item:first-child{
+        margin-left: auto;
+    }
+    .menu__item:last-child{
+        margin-left: auto;
+    }
+    .menu__item:last-child button{
+        width: 250px;
+    }
+    .header__top{
+        align-items: flex-start;
+    }
+}
+
+@media(max-width: 414px){
+    .main__title, .choose-color__title{
+        font-size: 28px;
+    }
+    .energy__number{
+        font-size: 92px;
+    }
+    .case img{
+        max-width: 100%;
+    }
+    .title{
+        font-size: 50px;
+    }
 }
